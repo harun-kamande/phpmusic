@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('backgrounddesigns/backgroundimage.png') center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="file"] {
+            padding: 10px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 45px;
+            width: 100%;
+            background-color: grey;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color:red;">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="post.html">post a song</a></li>
+            <li><a href="listen.php">listen a song</a></li>
+        </ul>
+    </header>
+    <div class="card">
+        <h2>Upload Music</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="music_title">Music Title:</label>
+                <input type="text" name="music_title" id="music_title" required>
+            </div>
+            <div class="form-group">
+                <label for="music_file">Select a music file (MP4/MP3):</label>
+                <input type="file" name="music_file" id="music_file" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="upload" value="Upload">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
