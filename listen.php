@@ -99,9 +99,9 @@ $result = $conn->query($sql);
         }
     </style>
 </head>
-<header>
+<header style="background-color:red;">
     <ul>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="home.php">Home</a></li>
         <li><a href="post.html">Post a Song</a></li>
         <li><a href="listen.php">Listen to Songs</a></li>
     </ul>
@@ -116,7 +116,7 @@ $result = $conn->query($sql);
             $file_type = strtolower(pathinfo($file_path, PATHINFO_EXTENSION));
 
             echo "<div class='card'>";
-            echo "<h3>" . htmlspecialchars($row['music_title']) . " by " . htmlspecialchars($row['user_name']) . "</h3>";
+            echo "<h3> Song: " . htmlspecialchars($row['music_title']) . "\n by " . htmlspecialchars($row['user_name']) . "</h3>";
             
             if ($file_type == 'mp3') {
                 echo "<audio controls loop>";
