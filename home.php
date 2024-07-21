@@ -102,8 +102,8 @@ $result = $conn->query($sql);
 <header style="background-color:red;">
     <ul>
         <li><a href="home.php">Home</a></li>
-        <li><a href="post.html">Post a Song</a></li>
-        <li><a href="listen.php">Listen to Songs</a></li>
+        <li><a href="post.html">Upload</a></li>
+        <li><a href="listen.php">Libraries</a></li>
     </ul>
 </header>
 <body>
